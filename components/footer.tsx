@@ -137,6 +137,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
+          {/* Contact Info */}
           <div>
             <h4 className="font-bold mb-6 text-lg">Get in Touch</h4>
             <div className="space-y-4">
@@ -146,25 +147,33 @@ export default function Footer() {
                   <p className="text-xs text-primary-foreground/70 font-semibold">
                     Email
                   </p>
-                  <p className="text-sm">hello@lifechangers.ng</p>
+                  <p className="text-sm">lifechanger26@gmail.com</p>
                 </div>
               </div>
+
               <div className="flex gap-3 items-start">
                 <Phone size={20} className="flex-shrink-0 mt-1 text-accent" />
                 <div>
                   <p className="text-xs text-primary-foreground/70 font-semibold">
                     Phone
                   </p>
-                  <p className="text-sm">+234 (0) XXX XXXX XXX</p>
+                  <p className="text-sm">08104613357</p>
                 </div>
               </div>
+
               <div className="flex gap-3 items-start">
                 <MapPin size={20} className="flex-shrink-0 mt-1 text-accent" />
                 <div>
                   <p className="text-xs text-primary-foreground/70 font-semibold">
                     Location
                   </p>
-                  <p className="text-sm">Lagos, Nigeria</p>
+                  <p className="text-sm">
+                    Suit 35 ShopRite Mall
+                    <br />
+                    Adeniran Ogunsanya St, Surulere
+                    <br />
+                    Lagos 100001, Nigeria
+                  </p>
                 </div>
               </div>
             </div>
@@ -180,7 +189,7 @@ export default function Footer() {
                   24/7 Crisis Support Available
                 </span>
                 <br />
-                Mental health emergencies: +234 XXXX XXXX
+                Mental health emergencies: 08104613357
               </p>
             </div>
             <div className="text-center">

@@ -148,29 +148,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quick Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            {[
-              { number: "5000+", label: "Lives Transformed" },
-              { number: "99%", label: "Client Satisfaction" },
-              { number: "50+", label: "Professional Staff" },
-              { number: "24/7", label: "Support Available" },
-            ].map((stat, i) => (
-              <div key={i}>
-                <p className="text-5xl font-bold mb-2 text-accent">
-                  {stat.number}
-                </p>
-                <p className="text-lg text-primary-foreground/90">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Services Overview */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

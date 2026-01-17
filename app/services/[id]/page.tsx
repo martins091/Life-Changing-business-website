@@ -1,11 +1,67 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { useParams } from "next/navigation"
-import { ArrowLeft, Check, Users, Brain, Briefcase, AlertTriangle, ArrowRight } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { useParams } from "next/navigation";
+import {
+  ArrowLeft,
+  Check,
+  Users,
+  Brain,
+  Briefcase,
+  AlertTriangle,
+  ArrowRight,
+} from "lucide-react";
 
 const servicesData = [
+  {
+    id: 7,
+    title: "Substance Use Disorder (SUD) Support",
+    icon: AlertTriangle,
+    shortDesc: "Specialized support for adults and adolescents",
+    fullDesc:
+      "Our licensed SUD professionals provide confidential help for individuals struggling with substance use challenges. We focus on prevention, recovery, emotional stability, and empowering clients with healthier coping strategies.",
+    image: "/african-woman-youth-counselor-supportive.jpg",
+    benefits: [
+      "Professional assessment and treatment planning",
+      "Adolescent-focused early intervention",
+      "Relapse prevention strategies",
+      "Family education and involvement",
+      "Coping skills for cravings and triggers",
+      "Safe and stigma-free healing environment",
+    ],
+    process: [
+      {
+        step: 1,
+        title: "SUD Assessment",
+        desc: "Understanding usage patterns, stress factors, and risk level",
+      },
+      {
+        step: 2,
+        title: "Personalized Support Plan",
+        desc: "Creating a treatment plan tailored to the client's age, goals, and recovery needs",
+      },
+      {
+        step: 3,
+        title: "Therapy & Counseling",
+        desc: "Evidence-based therapy sessions to build resilience and healthier habits",
+      },
+      {
+        step: 4,
+        title: "Recovery & Support",
+        desc: "Relapse prevention, family integration, and ongoing recovery support",
+      },
+    ],
+    pricing: "₦45,000 per 60-minute session",
+    duration: "8–20 sessions depending on support needs",
+    delivery: ["In-person", "Virtual", "Phone"],
+    whyChoose: [
+      "Certified SUD professionals",
+      "Judgment-free and private care",
+      "Strong track record supporting young people",
+      "Holistic treatment that involves family and mental health",
+    ],
+  },
   {
     id: 1,
     title: "Individual Counseling & Therapy",
@@ -294,25 +350,30 @@ const servicesData = [
       "Proven recovery protocols",
     ],
   },
-]
+];
 
 export default function ServiceDetailPage() {
-  const params = useParams()
-  const serviceId = Number.parseInt(params.id as string)
-  const service = servicesData.find((s) => s.id === serviceId)
+  const params = useParams();
+  const serviceId = Number.parseInt(params.id as string);
+  const service = servicesData.find((s) => s.id === serviceId);
 
   if (!service) {
     return (
       <div className="pt-20 min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-primary mb-4">Service Not Found</h1>
-          <Link href="/services" className="text-accent font-semibold flex items-center gap-2 justify-center">
+          <h1 className="text-4xl font-bold text-primary mb-4">
+            Service Not Found
+          </h1>
+          <Link
+            href="/services"
+            className="text-accent font-semibold flex items-center gap-2 justify-center"
+          >
             <ArrowLeft size={18} />
             Back to Services
           </Link>
         </div>
       </div>
-    )
+    );
   }
 
   return (
@@ -336,8 +397,12 @@ export default function ServiceDetailPage() {
             <ArrowLeft size={18} />
             Back to Services
           </Link>
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">{service.title}</h1>
-          <p className="text-xl text-primary-foreground/90 max-w-2xl">{service.fullDesc}</p>
+          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+            {service.title}
+          </h1>
+          <p className="text-xl text-primary-foreground/90 max-w-2xl">
+            {service.fullDesc}
+          </p>
         </div>
       </section>
 
@@ -356,18 +421,25 @@ export default function ServiceDetailPage() {
               />
             </div>
             <div>
-              <h2 className="text-4xl font-bold text-primary mb-6">What This Service Includes</h2>
+              <h2 className="text-4xl font-bold text-primary mb-6">
+                What This Service Includes
+              </h2>
               <div className="space-y-4 mb-8">
                 {service.benefits.map((benefit, i) => (
                   <div key={i} className="flex gap-4 items-start">
-                    <Check className="text-accent flex-shrink-0 mt-1" size={20} />
+                    <Check
+                      className="text-accent flex-shrink-0 mt-1"
+                      size={20}
+                    />
                     <span className="text-foreground/80">{benefit}</span>
                   </div>
                 ))}
               </div>
               <div className="bg-accent/10 border border-accent/20 p-6 rounded-lg">
                 <p className="text-sm text-foreground/70 mb-2">Pricing</p>
-                <p className="text-2xl font-bold text-accent mb-4">{service.pricing}</p>
+                <p className="text-2xl font-bold text-accent mb-4">
+                  {service.pricing}
+                </p>
                 <p className="text-sm text-foreground/70">{service.duration}</p>
               </div>
             </div>
@@ -379,7 +451,9 @@ export default function ServiceDetailPage() {
       <section className="py-20 bg-primary/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">How It Works</h2>
+            <h2 className="text-4xl font-bold text-primary mb-4">
+              How It Works
+            </h2>
             <div className="w-16 h-1 bg-accent mx-auto rounded-full"></div>
           </div>
 
@@ -390,7 +464,9 @@ export default function ServiceDetailPage() {
                   <div className="w-12 h-12 rounded-full bg-accent text-accent-foreground flex items-center justify-center font-bold text-xl mx-auto mb-4">
                     {item.step}
                   </div>
-                  <h3 className="text-lg font-bold text-primary mb-2">{item.title}</h3>
+                  <h3 className="text-lg font-bold text-primary mb-2">
+                    {item.title}
+                  </h3>
                   <p className="text-sm text-foreground/70">{item.desc}</p>
                 </div>
                 {i < 3 && (
@@ -408,7 +484,9 @@ export default function ServiceDetailPage() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">Delivery Methods</h2>
+            <h2 className="text-4xl font-bold text-primary mb-4">
+              Delivery Methods
+            </h2>
             <div className="w-16 h-1 bg-accent mx-auto rounded-full"></div>
           </div>
 
@@ -429,10 +507,15 @@ export default function ServiceDetailPage() {
       {/* Why Choose This Service */}
       <section className="py-20 bg-primary/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-primary mb-12 text-center">Why Choose Our {service.title}</h2>
+          <h2 className="text-4xl font-bold text-primary mb-12 text-center">
+            Why Choose Our {service.title}
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {service.whyChoose.map((reason, i) => (
-              <div key={i} className="bg-card p-8 rounded-xl border border-border flex gap-4">
+              <div
+                key={i}
+                className="bg-card p-8 rounded-xl border border-border flex gap-4"
+              >
                 <Check className="text-accent flex-shrink-0 mt-1" size={24} />
                 <div>
                   <p className="text-foreground/80">{reason}</p>
@@ -448,7 +531,8 @@ export default function ServiceDetailPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
           <p className="text-lg text-primary-foreground/90 mb-8">
-            Schedule your session and begin your journey towards healing and growth today.
+            Schedule your session and begin your journey towards healing and
+            growth today.
           </p>
           <Link
             href="/contact"
@@ -460,5 +544,5 @@ export default function ServiceDetailPage() {
         </div>
       </section>
     </main>
-  )
+  );
 }

@@ -21,7 +21,7 @@ const heroSlides = [
     title: "Transform Your Life",
     subtitle: "Start Your Journey Today",
     description:
-      "5000+ lives transformed with 99% client satisfaction. Committed to the highest quality mental health care rooted in African values.",
+      "Client-centered mental health care, including Substance Use Disorder (SUD) support, delivered with compassion and confidentiality.",
     image: "/african-counselor-woman-listening-empathy.jpg",
     cta1: "Learn More",
     cta2: "Schedule Now",
@@ -31,7 +31,7 @@ const heroSlides = [
     title: "Professional Excellence",
     subtitle: "Compassionate Care",
     description:
-      "50+ licensed professionals with years of experience. Flexible scheduling, evidence-based treatments, and a safe environment.",
+      "Dedicated mental health experts providing therapy, counseling, and adolescent SUD treatment in a safe, supportive environment.",
     image: "/african-doctor-woman-professional-confident.jpg",
     cta1: "Meet Our Team",
     cta2: "Book Session",

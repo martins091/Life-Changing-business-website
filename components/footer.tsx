@@ -157,7 +157,7 @@ export default function Footer() {
                   <p className="text-xs text-primary-foreground/70 font-semibold">
                     Phone
                   </p>
-                  <p className="text-sm">08104613357</p>
+                  <p className="text-sm">08084711113, +2349074769274</p>
                 </div>
               </div>
 
@@ -189,7 +189,7 @@ export default function Footer() {
                   24/7 Crisis Support Available
                 </span>
                 <br />
-                Mental health emergencies: 08104613357
+                Mental health emergencies:0808 471 1113
               </p>
             </div>
             <div className="text-center">

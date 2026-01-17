@@ -77,7 +77,6 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Information */}
-      {/* Contact Information */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -95,9 +94,9 @@ export default function ContactPage() {
                 icon: Phone,
                 title: "Call Us",
                 details: [
-                  "0810 461 3357",
-                  "Mon – Fri: 9AM – 6PM",
-                  "Weekend emergency support available",
+                  "+234 907 476 9274",
+                  "0808 471 1113",
+                  "Mon – Fri: 9AM – 6PM, Weekend emergency support available",
                 ],
               },
               {
